@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="1dp"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputProductName_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="2dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/colorPrimary"
+        app:boxCornerRadiusTopEnd="0dp"
+        app:boxCornerRadiusTopStart="2dp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/inputProductSize_layout"
+        app:layout_constraintEnd_toStartOf="@+id/inputProductBrand_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:hint="Nome..."
+            android:inputType="textCapSentences"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputProductBrand_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/colorPrimary"
+        app:boxCornerRadiusTopEnd="2dp"
+        app:boxCornerRadiusTopStart="0dp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inputProductName_layout"
+        app:layout_constraintTop_toTopOf="@id/inputProductName_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_productBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:hint="Marca..."
+            android:inputType="textCapSentences"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputProductSize_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:elevation="1dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="2dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/colorPrimary"
+        app:boxCornerRadiusTopEnd="0dp"
+        app:boxCornerRadiusTopStart="0dp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/inputProductAmount_layout"
+        app:layout_constraintEnd_toStartOf="@+id/inputProductBrand_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputProductName_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_productSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:hint="Tamanho..."
+            android:inputType="textCapWords"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/category_hint"
+        style="@style/InputLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp"
+        android:text="Categoria..."
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/category_spinner"
+        app:layout_constraintEnd_toEndOf="@+id/category_spinner"
+        app:layout_constraintStart_toStartOf="@+id/category_spinner"
+        app:layout_constraintTop_toTopOf="@+id/inputProductSize_layout" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/category_spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/inputProductSize_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/inputProductSize_layout"
+        app:layout_constraintTop_toBottomOf="@+id/category_hint" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputProductAmount_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:elevation="1dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="2dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/colorPrimary"
+        app:boxCornerRadiusTopEnd="0dp"
+        app:boxCornerRadiusTopStart="0dp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/inputProductExpiration_layout"
+        app:layout_constraintEnd_toStartOf="@+id/inputProductBrand_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputProductSize_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_productAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:hint="Quantidade..."
+            android:inputType="numberDecimal"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/unit_hint"
+        style="@style/InputLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp"
+        android:text="Medida..."
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/unit_spinner"
+        app:layout_constraintEnd_toEndOf="@+id/unit_spinner"
+        app:layout_constraintStart_toStartOf="@+id/unit_spinner"
+        app:layout_constraintTop_toTopOf="@+id/inputProductAmount_layout" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/unit_spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/inputProductAmount_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/inputProductAmount_layout"
+        app:layout_constraintTop_toBottomOf="@id/unit_hint" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputProductExpiration_layout"
+        android:clickable="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:elevation="1dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="2dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/colorPrimary"
+        app:boxCornerRadiusTopEnd="0dp"
+        app:boxCornerRadiusTopStart="0dp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/inputProductComments_layout"
+        app:layout_constraintEnd_toStartOf="@+id/inputProductValue_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputProductAmount_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_productExpiration"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:focusable="false"
+            android:hint="Validade..."
+            android:inputType="date"
+            android:maxLength="10"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputProductValue_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/colorPrimary"
+        app:boxCornerRadiusTopEnd="0dp"
+        app:boxCornerRadiusTopStart="0dp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inputProductExpiration_layout"
+        app:layout_constraintTop_toTopOf="@+id/inputProductExpiration_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_productValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:hint="Valor em R$..."
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputProductComments_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="1dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/colorPrimary"
+        app:boxCornerRadiusBottomEnd="2dp"
+        app:boxCornerRadiusBottomStart="2dp"
+        app:boxCornerRadiusTopEnd="0dp"
+        app:boxCornerRadiusTopStart="0dp"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputProductValue_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_productComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="top|start"
+            android:hint="Observações..."
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="4"
+            android:minLines="4"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

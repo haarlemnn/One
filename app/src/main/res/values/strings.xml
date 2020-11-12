@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">One</string>
+
+    <!--Main Activity-->
+    <string name="welcome">Bem-vindo,</string>
+        <!--Card Empty Stock-->
+        <string name="empty_stock">Estoque vazio!</string>
+        <string name="empty_description">Você não tem nenhum produto disponível no estoque, adicione novos produtos agora mesmo.</string>
+        <string name="btn_clickHere">Clique aqui</string>
+    <!--Main Activity-->
+
+</resources>
